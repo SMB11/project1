@@ -4,8 +4,8 @@ public class project2 {
 	public static void positionCounter(double t, double F, double M1, double M2,double M3,double my1,double my2, double my3, double x1, double y1, double x2, double x3, double y3) {
 		final int g = 10; // m/s^2
 		
-		double a1; // a1 is for M1
-		double a2; // a2 is for M2 and M3
+		double a1;  
+		double a2; 
 		double x1fin;
 		double x2fin;
 		double x3fin;
@@ -46,15 +46,16 @@ public class project2 {
 			System.out.println("Value of x1:"+x1fin);
 			System.out.println("Value of x2:"+x2fin);
 			System.out.println("Value of x3:"+x3fin+"   y3:"+ y3fin);
+			System.out.println("  ");
 		}
 		
 	}
 	
 	
 	public static void main(String[] args) {
-		positionCounter(1,200,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
-		positionCounter(2,200,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
-		positionCounter(3,200,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
+		positionCounter(1,-100,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
+		positionCounter(2,-100,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
+		positionCounter(3,-100,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
 		
 	}
 
