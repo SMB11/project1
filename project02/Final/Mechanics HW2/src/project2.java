@@ -22,24 +22,26 @@ public class project2 {
 		}
 		
 		if(F<0) {
-			a2 = (M3*g-my3*M3*g-my2*M2*g-F)/(M2+M3);
-			a1 = (F-my1*(M1+M2+M3)*g)/(M1+M2+M3);
+			a1 = (M3*g-my3*M3*g-my2*M2*g-F)/(M2+M3);
+			a2 = (F-my1*(M1+M2+M3)*g)/(M1+M2+M3);
 			
-			x1fin=x1+(a1*t*t)/2;
-			x2fin=x2+(a2*t*t)/2;
-			x3fin= x3+(a1*t*t)/2;
+			x1fin=x1+(a2*t*t)/2;
+			x2fin=x2+(a1*t*t)/2;
+			x3fin= x3+(a2*t*t)/2;
 			y3fin = y3-(a2*t*t)/2;
 			System.out.println("Value of x1:"+x1fin);
 			System.out.println("Value of x2:"+x2fin);
 			System.out.println("Value of x3:"+x3fin+"   y3:"+ y3fin);
 		}
 		else if(F>0) {
-			a2 = (M3*g-my3*M3*g-my2*M2*g+F)/(M2+M3);
-			a1 = (F-my1*(M1+M2+M3)*g)/(M1+M2+M3);
+			a1 = (F-my2*M1*g+M3*g-my3*M3*g)/(M2+M3);
 			
-			x1fin=(a1*t*t)/2 - x1;
-			x2fin=(a2*t*t)/2 - x2;
-			x3fin= (a1*t*t)/2-x3;
+//			a1 = (M3*g-my3*M3*g-my2*M2*g+F)/(M2+M3);
+			a2= (F-my1*(M1+M2+M3)*g)/(M1+M2+M3);
+			
+			x1fin=(a2*t*t)/2 + x1;
+			x2fin=(a1*t*t)/2 + x2;
+			x3fin= (a2*t*t)/2 + x3;
 			y3fin = y3-(a2*t*t)/2;
 			System.out.println("Value of x1:"+x1fin);
 			System.out.println("Value of x2:"+x2fin);
@@ -50,7 +52,10 @@ public class project2 {
 	
 	
 	public static void main(String[] args) {
-		positionCounter(1,200,9,5,1,0.4,0.4,0.4,0,0,0,0,0);
+		positionCounter(1,200,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
+		positionCounter(2,200,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
+		positionCounter(3,200,9,2,4,0.4,0.4,0.4,0,0,0,0,0);
+		
 	}
 
 }
